@@ -1,0 +1,24 @@
+{
+  "name": "homestead",
+  "installation": {
+    "version": "latest",
+    "plugins": {
+      "@nx/gradle": "latest"
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/gradle",
+      "options": {
+        "testTargetName": "test",
+        "classesTargetName": "classes",
+        "buildTargetName": "build"
+      }
+    }
+  ],
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*"
+    ]
+  }
+}

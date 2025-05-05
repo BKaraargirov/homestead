@@ -138,3 +138,7 @@ yarn-error.log*
 .env.local
 .cache
 .parcel-cache
+
+.nx/installation
+.nx/cache
+.nx/workspace-data

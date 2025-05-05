@@ -13,11 +13,11 @@ dependencyResolutionManagement {
 
 plugins {
   // Use the Foojay Toolchains plugin to automatically download JDKs required by subprojects.
+  // Convert to Groovy DSL if needed
   id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
 rootProject.name = "homestead"
 
-include(":auth")
-
 include("sdk")
+include("auth")
