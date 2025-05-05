@@ -1,11 +1,11 @@
-package com.theunderroot.homestead.auth
+package com.theunderroot.homestead.gatekeeper
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-open class AuthApplication
+class GatekeeperApplication
 
 fun main(args: Array<String>) {
-    runApplication<AuthApplication>(*args)
+    runApplication<GatekeeperApplication>(*args)
 }

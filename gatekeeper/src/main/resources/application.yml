@@ -1,0 +1,29 @@
+server:
+   port: 9700
+   max-http-request-header-size: 32768
+   servlet:
+     session:
+       tracking-modes: COOKIE  # Prevents URL rewriting
+       cookie:
+         http-only: true
+         secure: false        # Set to true in production with HTTPS
+
+spring:
+ application:
+   name: gatekeeper
+ cloud:
+   gateway:
+     routes:
+       - id: auth-service
+         uri: http://localhost:9701
+         predicates:
+           - Path=/api/auth/**
+       - id: homestead-ui-service
+         uri: http://localhost:9601
+         predicates:
+           - Path=/**
+
+logging:
+ level:
+   org.springframework.cloud.gateway: DEBUG
+   reactor.netty: INFO

@@ -1,6 +1,9 @@
 plugins {
     kotlin("jvm")
     alias(libs.plugins.kotlinPluginSerialization)
+    alias(libs.plugins.springBoot)
+    alias(libs.plugins.springDepencyManagement)
+    alias(libs.plugins.kotlinSpring)
 }
 
 group = "com.theunderroot"

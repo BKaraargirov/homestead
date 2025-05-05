@@ -10,6 +10,8 @@ kotlinxCoroutines = "1.9.0"
 
 # Spring versions
 springBoot = "3.4.5"
+springCloud="4.2.2"
+springDepManagement="1.1.4"
 
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -20,6 +22,7 @@ kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", 
 # Spring
 springBootStarter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot"}
 springBootStarterWeb = { module ="org.springframework.boot:spring-boot-starter-web", version.ref = "springBoot" }
+springCloudStarterGateway = { module = "org.springframework.cloud:spring-cloud-starter-gateway", version.ref = "springCloud"}
 
 # Libraries can be bundled together for easier import
 [bundles]
@@ -28,3 +31,6 @@ springService = ["springBootStarter", "springBootStarterWeb"]
 
 [plugins]
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+springBoot = { id = "org.springframework.boot", version.ref =  "springBoot" }
+springDepencyManagement = { id = "io.spring.dependency-management", version.ref = "springDepManagement" }
+kotlinSpring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin"}

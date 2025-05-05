@@ -4,20 +4,22 @@
 // https://docs.gradle.org/current/userguide/settings_file_basics.html
 
 dependencyResolutionManagement {
-  // Use Maven Central as the default repository (where Gradle will download dependencies) in all subprojects.
-  @Suppress("UnstableApiUsage")
-  repositories {
-    mavenCentral()
-  }
+    // Use Maven Central as the default repository (where Gradle will download dependencies) in all subprojects.
+    @Suppress("UnstableApiUsage")
+    repositories {
+        mavenCentral()
+    }
 }
 
 plugins {
-  // Use the Foojay Toolchains plugin to automatically download JDKs required by subprojects.
-  // Convert to Groovy DSL if needed
-  id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+    // Use the Foojay Toolchains plugin to automatically download JDKs required by subprojects.
+    // Convert to Groovy DSL if needed
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
 rootProject.name = "homestead"
 
 include("sdk")
 include("auth")
+
+include("gatekeeper")
